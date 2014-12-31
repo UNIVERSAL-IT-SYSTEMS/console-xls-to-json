@@ -1,0 +1,32 @@
+# Mac OS X
+
+export CC="gcc"
+export CXX="g++"
+export CCFLAGS="-arch x86_64"
+export CXXFLAGS="-arch x86_64"
+export CFLAGS="-arch x86_64 -mmacosx-version-min=10.8"
+export LDFLAGS="-arch x86_64 -mmacosx-version-min=10.8 -L/usr/local/lib"
+export CPPFLAGS="-arch x86_64 -mmacosx-version-min=10.8 -I/usr/local/include"
+export PKG_CONFIG=/usr/local/bin/pkg-config
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+# Ubuntu
+
+export LD_LIBRARY_PATH='/usr/local/lib:/usr/lib'
+export LD_RUN_PATH='/usr/local/lib:/usr/lib'
+
+export LDFLAGS="-L/usr/local/lib"
+export CPPFLAGS="-I/usr/local/include"
+
+readelf -d 
+chrpath -r '$ORIGIN' 
+
+#MinGW64
+
+export PKG_CONFIG=/usr/local/bin/pkg-config.exe
+export LDFLAGS="-L/usr/local/lib"
+export CFLAGS="-L/usr/local/lib"
+export LDFLAGS="-L/usr/local/lib"
+export CPPFLAGS="-I/usr/local/include"
+
+./configure --host=x86_64-w64-mingw32
