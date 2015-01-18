@@ -18,7 +18,10 @@
     <ClCompile Include="..\..\xlstojson.cc">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Windows64\getopt.cc">
+    <ClCompile Include="..\utf8.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\platform\getopt.cc">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +29,7 @@
     <ClInclude Include="..\..\xlstojson.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Windows64\getopt.h">
+    <ClInclude Include="..\..\platform\getopt.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

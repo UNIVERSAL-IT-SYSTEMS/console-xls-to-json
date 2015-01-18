@@ -11,4 +11,8 @@
 
 void xlstojson(char *path);
     
+#ifdef _WIN32
+#include <string>
+void unescape_path(std::string &path);
+#endif
 #endif

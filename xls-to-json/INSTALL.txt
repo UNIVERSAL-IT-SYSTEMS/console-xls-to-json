@@ -23,6 +23,9 @@ chrpath -r '$ORIGIN'
 
 #MinGW64
 
+export CC="x86_64-w64-mingw32-gcc"
+export AR="x86_64-w64-mingw32-ar"
+export RANLIB="x86_64-w64-mingw32-ranlib"
 export PKG_CONFIG=/usr/local/bin/pkg-config.exe
 export LDFLAGS="-L/usr/local/lib"
 export CFLAGS="-L/usr/local/lib"

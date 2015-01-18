@@ -22,12 +22,20 @@ int main(int argc, char *argv[])
     if(argc == 1) usage();
     
     int ch;
-    
+#ifdef _WIN32
+    std::string path;    
+#endif     
     while ((ch = getopt(argc, argv, "f:")) != -1){
                 
         switch (ch){
                 case 'f':
-                    xlstojson(optarg);
+#ifdef _WIN32
+                path = std::string(optarg);
+                unescape_path(path);
+                xlstojson((char *)path.c_str());  
+#else
+                    xlstojson(optarg);                
+#endif                
                     break;
                                 
             default:

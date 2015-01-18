@@ -19,11 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Windows64\getopt.cc" />
+    <ClCompile Include="..\..\platform\getopt.cc" />
     <ClCompile Include="..\..\xlstojson.cc" />
+    <ClCompile Include="..\utf8.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Windows64\getopt.h" />
+    <ClInclude Include="..\..\platform\getopt.h" />
     <ClInclude Include="..\..\xlstojson.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -153,7 +156,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\miyako\Desktop\project-json-1\include;C:\Users\miyako\Desktop\project-json-1\Windows64;C:\Users\miyako\Desktop\project-json-1\include\_internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\platform;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -162,7 +165,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>libcharset-1.lib;libfreexl-1.lib;libiconv-2.lib;libjson-7.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\miyako\Desktop\project-json-1\Windows64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\platform;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
