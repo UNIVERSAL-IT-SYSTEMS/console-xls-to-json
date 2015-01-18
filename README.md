@@ -1,4 +1,4 @@
-console-xml-to-json
+console-xsl-to-json
 ===================
 
-Convert XML to JSON (command line program)
+Convert XLS to JSON (command line program) using FeeXL and libjson.
